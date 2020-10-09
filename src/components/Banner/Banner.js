@@ -19,6 +19,13 @@ function Banner(props) {
         }
         fetchData()
     }, [])
+
+    const truncate = (str, n) => {
+        return (
+            str?.length > n ? str.substr(0, n-1) + "..." : str
+        )
+    }
+
     console.log(movie)
     return (
         <header className="banner"
@@ -37,9 +44,10 @@ function Banner(props) {
                     <button className="banner__button">My List</button>
                 </div>
                 <h1 className="banner__description">
-                    {movie?.overview}
+                    {truncate(movie?.overview, 500)}
                 </h1>
             </div>
+            <div className="banner--fadeBottom"/>
         </header>
     );
 }

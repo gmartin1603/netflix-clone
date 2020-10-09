@@ -1,3 +1,11 @@
 * {
     margin: 0;
 }
+
+.app::-webkit-scrollbar {
+    display: none;
+}
+
+.app {
+    background-color: #111;
+}
